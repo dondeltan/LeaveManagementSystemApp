@@ -1,0 +1,45 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<app-header></app-header>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <h3 class="h3">Books Store</h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6" *ngFor = "let a of bookDetails">
+            <div class="product-grid4">
+                <div class="product-image4">
+                   
+                        <img class="pic-1" src="assets/books/The-Monk-Who-Sold-His-Ferrari.jpg">
+                        <img class="pic-2" alt="{{a.bookName}}"  style="cursor:pointer;" (click)="selectProduct(a.bookID)"  src="assets/books/The-Monk-Who-Sold-His-Ferrari.jpg">
+                   
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                    <span class="product-discount-label">-10%</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">{{a.bookName}}</a></h3>
+                    <h6 style = "font-size: 12px;" class="title"><a href="#">{{a.publisher}}</a></h6>
+                    <div class="price">
+                        ${{a.price}}
+                        <span>${{a.price}}</span>
+                    </div>
+                    <a class="add-to-cart" href="">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<hr>
+
